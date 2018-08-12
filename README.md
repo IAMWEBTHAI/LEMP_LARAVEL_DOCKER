@@ -87,6 +87,7 @@ services:
 
 ### [domain].conf เปลี่ยนชื่อ domain เป็นชื่อเว็บเรา
 
+```
 server {
    charset utf-8;
    client_max_body_size 128M;
@@ -124,17 +125,17 @@ server {
        deny all;
    }
 }
-
+```
 
 ### ขั้นตอนการติดตั้ง
 
-* 1. ให้วางโครงสร้างข้อมูล
-* 2. นำ Laravel มาไว้ใน "www"
-* 3. docker-compose up -d ติดตั้ง Container และ Run
-* 4. docker exec -it php sh เข้าใช้งาน Container
-* 5. หลังเข้า exec ให้ใช้คำสั่ง php composer install ติดตั้ง Laravel
-* 6. แก้ไขไฟล์ใน .env
-เสร็จสิ้นพร้อมใช้งาน
+* ให้วางโครงสร้างข้อมูล
+* นำ Laravel มาไว้ใน "www"
+* docker-compose up -d ติดตั้ง Container และ Run
+* docker exec -it php sh เข้าใช้งาน Container
+* หลังเข้า exec ให้ใช้คำสั่ง php composer install ติดตั้ง Laravel
+* แก้ไขไฟล์ใน .env
+* --------------- เสร็จสิ้นพร้อมใช้งาน ---------------
 
 ## Authors
 
