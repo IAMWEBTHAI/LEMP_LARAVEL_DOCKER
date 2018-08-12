@@ -1,0 +1,48 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.6
+    restart: always
+    volumes:
+      - ./mysql/initdb/:/docker-entrypoint-initdb.d
+      - ./mysql/data/:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Iceza0251ZA
+      - MYSQL_DATABASE=like666
+      - MYSQL_USER=like666
+      - MYSQL_PASSWORD=Iceza0251ZA
+    
+  
+  php:
+    build: ./php
+    restart: always
+    volumes:
+      - ./www/:/var/www/html/
+      - ./php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+      - ./logs/php-fpm:/var/log/php-fpm
+    expose:
+      - "9000"
+  
+  nginx:
+    image: nginx:stable-alpine
+    restart: always
+    volumes:
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./logs/nginx:/var/log/nginx
+    volumes_from:
+      - php
+    ports:
+      - "80:80"
+  
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=db
+      - PMA_ARBITRARY=1
+    ports:
+      - "8000:80"
