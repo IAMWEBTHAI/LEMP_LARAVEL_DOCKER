@@ -137,6 +137,12 @@ server {
 * แก้ไขไฟล์ใน .env
 * --------------- เสร็จสิ้นพร้อมใช้งาน ---------------
 
+## hub Docker ที่ใช้
+* [Nginx](https://hub.docker.com/_/nginx/)
+* [PHP](https://hub.docker.com/_/php/)
+* [mysql](https://hub.docker.com/_/mysql/)
+* [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
+
 ## Authors
 
 [IAMTHEME จำหน่ายสคริปเว็บ](https://www.iamtheme.com/)
