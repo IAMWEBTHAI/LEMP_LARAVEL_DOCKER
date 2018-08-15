@@ -38,7 +38,7 @@ MyProject
 version: '2'
 services:
   db:
-    image: mysql:5.6
+    image: mysql:5.7
     restart: always #Restart ทุกครั้งเมื่อ Service ทำงานผิดพลาด
     volumes: #คือการดึงไฟล์ใน Container มาเพื่อสามารถแก้ไขโค้ดได้ง่าย(ถ้าไฟล์ใดเปลี่ยนแปลงจะส่งผลต่อทั้งสอง Directory)
       - ./mysql/initdb/:/docker-entrypoint-initdb.d
