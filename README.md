@@ -1,4 +1,4 @@
-# Docker LEMP+LARAVEL | nginx + php7-fpm(extensions) + mysql5.6 + phpmyadmin + laravel
+# Docker LEMP+LARAVEL | nginx + php7-fpm(extensions) + mysql5.7 + phpmyadmin + laravel
 
 Git นี้สร้างขึ้นไว้ใช้ส่วนตัวคำอธิบายต่างๆท่านอาจจะไม่เข้าใจ หากจะนำไปใช้ก็สามารถนำไปใช้ได้โดยไม่ต้องขออนุญาติใดๆ
 
